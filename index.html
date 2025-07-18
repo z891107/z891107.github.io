@@ -1,28 +1,121 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:image" content="https://shinelife.github.io/selfIntro.jpg">
-    <title>ShineLife's website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShineLife's Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #2d3748;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.25rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .project {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .tag {
+      display: inline-block;
+      background: #3182ce;
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+      font-size: 0.8rem;
+    }
+  </style>
 </head>
 <body>
-<main>
-    <section class="personal-container">
-
+  <header>
+    <h1>傅永傑 Yong-Jie Fu</h1>
+    <p>後端工程師 ┃ Laravel / Node.js / Golang / MySQL / Vue.js / WebSocket / Ant Design</p>
+  </header>
+  <main>
+    <section>
+      <h2>自我介紹</h2>
+      <p>我是傅永傑，具備 Laravel、Golang、Node.js 等後端技術，曾參與多項系統開發與效能強化。也是國際技能競賽代表選手，榮獲 WorldSkills Asia 銀牌與WorldSkills Lyon 優勝獎項。</p>
     </section>
-    <section class="about-container">
 
+    <section>
+      <h2>技能總覽</h2>
+      <ul>
+        <li>軟體開發：Laravel / Node.js / Golang / C# / JavaScript</li>
+        <li>資料庫：MySQL / MSSQL</li>
+        <li>工具與試算：Git / RESTful API / E2E 測試 / Electron</li>
+        <li>前端框架：Vue.js / WebSocket / Ant Design</li>
+      </ul>
     </section>
-    <section class="prize-container">
 
-    </section>
-    <section class="portfolio-container">
+    <section>
+      <h2>精選專案</h2>
 
+      <div class="project">
+        <h3>積木式程式設計平臺 (2023)</h3>
+        <span class="tag">Vue.js</span><span class="tag">Electron</span><span class="tag">Blockly</span>
+        <p>實作 SPA 前端與技教教育接觸，支援 Arduino 程式組裝與備份操作。</p>
+      </div>
+
+      <div class="project">
+        <h3>M16DealingTool 麻將 AI 配牌分析工具 (2022)</h3>
+        <span class="tag">C#</span><span class="tag">WinForms</span>
+        <p>實作麻將配牌觀念分析模組，算法加值有效提升準確度與遊戲性。</p>
+      </div>
+
+      <div class="project">
+        <h3>GolangGameManager (2022)</h3>
+        <span class="tag">Golang</span><span class="tag">C++</span>
+        <p>搭配桌遊機智能測算核心導入，支援 DLL 檔連動。</p>
+      </div>
+
+      <div class="project">
+        <h3>線上聊天室 Chatting Room (2021)</h3>
+        <span class="tag">Vue.js</span><span class="tag">WebSocket</span><span class="tag">RESTful API</span>
+        <p>支援多房間、語者切換、預約功能，完成非常手準的後端數據作業工程。</p>
+      </div>
     </section>
-</main>
+
+    <section>
+      <h2>競賽經歷</h2>
+      <ul>
+        <li>WorldSkills Asia 2023 - 銀牌</li>
+        <li>WorldSkills Lyon 2024 - 優勝獎項</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>聯絡方式</h2>
+      <p>Email: nevergiveuptherace@gmail.com</p>
+      <p>GitHub: <a href="https://github.com/shinelife" target="_blank">github.com/shinelife</a></p>
+    </section>
+  </main>
 </body>
 </html>
