@@ -4,55 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShineLife's Portfolio</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background: #2d3748;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin-bottom: 0.5rem;
-    }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.25rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .project {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .tag {
-      display: inline-block;
-      background: #3182ce;
-      color: white;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      margin-right: 0.5rem;
-      font-size: 0.8rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -75,61 +27,181 @@
       </ul>
     </section>
 
-    <section>
-      <h2>精選專案</h2>
-
-      <div class="project">
-        <h3>積木式程式設計平台 (2023/3~2023/7)</h3>
-        <span class="tag">Vue.js</span><span class="tag">Electron</span><span class="tag">Blockly</span>
-        <!-- 以下為專案經歷條列描述，繁體中文註解 -->
-        <ul>
-          <li>使用 Vue.js 開發 SPA 前端，實現積木拖拉、即時程式碼產生與預覽功能。</li>
-          <li>整合 Blockly 與 Ardublockly，支援 Arduino 程式積木化編輯與一鍵上傳。</li>
-          <li>跨平台打包（Windows/Linux），整合 Electron 技術，方便安裝與部署。</li>
-          <li>客製化 Blockly 積木與教學範例，支援多種感測器與硬體模組。</li>
-          <li>前後端模組化設計，易於擴充與維護。</li>
-          <li>撰寫自動化測試（單元測試、E2E 測試），確保系統穩定性。</li>
-          <li>整合多國語系（i18n），提升國際化應用潛力。</li>
-          <li>撰寫詳細使用者文件與教學資源，協助教師與學生快速上手。</li>
-        </ul>
+    <section style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+      <!-- 作品欄 -->
+      <div style="flex: 1 1 320px; min-width: 280px;">
+        <h2>作品</h2>
+        <div id="works-list">
+          <!-- 每個作品項目 -->
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>線上點餐系統</h3>
+              <span class="tag">Vue.js</span><span class="tag">Node.js</span><span class="tag">MySQL</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>設計並開發完整線上點餐平台，支援多店家、菜單管理、訂單流程與即時通知。</li>
+                <li>前端採用 Vue.js，後端以 Node.js + MySQL 架構，實現 RESTful API 串接。</li>
+                <li>整合第三方金流與 QR Code 點餐，提升用戶便利性。</li>
+                <li>負責 UI/UX 設計，確保手機、平板、桌機皆有良好體驗。</li>
+              </ul>
+              <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+                <img src="img/order meal.png" alt="線上點餐系統畫面1" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <img src="img/order meal 2.png" alt="線上點餐系統畫面2" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+              </div>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>五子棋遊戲</h3>
+              <span class="tag">Golang</span><span class="tag">WebSocket</span><span class="tag">Vue.js</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>開發即時對戰五子棋遊戲，支援玩家配對、觀戰與聊天功能。</li>
+                <li>後端以 Golang + WebSocket 處理即時連線，前端採用 Vue.js 呈現棋盤互動。</li>
+                <li>設計遊戲規則判斷與勝負判定演算法。</li>
+                <li>實作房間管理與遊戲歷程記錄，提升用戶體驗。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>訂票系統開發</h3>
+              <span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">RESTful API</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>設計並開發活動訂票系統，支援座位選擇、票種設定、線上付款與 QR Code 驗票。</li>
+                <li>後端採用 Laravel，實現多角色權限控管與訂單管理。</li>
+                <li>串接第三方金流與 Email 通知，提升自動化程度。</li>
+                <li>撰寫 API 文件，方便前端與第三方系統整合。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>圖書館API開發</h3>
+              <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MySQL</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>設計並開發圖書館管理 API，支援書籍查詢、借閱、歸還與逾期管理。</li>
+                <li>採用 Node.js + Express 架構，資料庫使用 MySQL。</li>
+                <li>實作 JWT 驗證機制，確保 API 安全性。</li>
+                <li>撰寫 Swagger 文件，方便前端與第三方系統串接。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project">
-        <h3>M16DealingTool 麻將發牌與牌型分析工具 (2022/6~2022/9)</h3>
-        <span class="tag">C#</span><span class="tag">WinForms</span>
-        <!-- 以下為專案經歷條列描述，繁體中文註解 -->
-        <ul>
-          <li>使用 C# WinForms 開發，實作完整麻將遊戲發牌流程與玩家資料結構。</li>
-          <li>設計並實現多種牌型判斷與胡牌分析演算法，提升遊戲決策輔助能力。</li>
-          <li>開發視窗化操作介面，方便使用者進行發牌、查詢與測試。</li>
-          <li>支援自訂遊戲規則與參數設定，提升工具彈性與適用性。</li>
-          <li>熟悉物件導向設計、事件驅動程式設計與 UI/UX 基本原則。</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>GolangGameManager (2022/6~2022/7)</h3>
-        <span class="tag">Golang</span><span class="tag">C++</span>
-        <!-- 以下為專案經歷條列描述，繁體中文註解 -->
-        <ul>
-          <li>以 Golang 為主體，整合並呼叫 C++ DLL 執行麻將遊戲核心邏輯。</li>
-          <li>實作房間管理、遊戲規則設定與 AI 決策模組。</li>
-          <li>專案高度模組化，方便擴充與維護。</li>
-          <li>程式碼具繁體中文註解，強化團隊協作。</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>Chatting Room 線上聊天室平台 (2021/6~2021/8)</h3>
-        <span class="tag">Vue.js</span><span class="tag">WebSocket</span><span class="tag">RESTful API</span>
-        <!-- 以下為專案經歷條列描述，繁體中文註解 -->
-        <ul>
-          <li>以 Vue.js 開發即時聊天室平台，支援多房間、主持人管理、語音錄音、預約包廂等功能。</li>
-          <li>整合 WebSocket 實現即時訊息與語音互動，提升用戶溝通效率。</li>
-          <li>與後端 API 串接，實現用戶認證、房間管理、用戶資料維護等功能。</li>
-          <li>採用模組化元件設計，提升程式碼可維護性與擴展性。</li>
-          <li>負責 UI/UX 設計，確保跨裝置、跨瀏覽器相容性。</li>
-        </ul>
+      <!-- 專案經歷欄 -->
+      <div style="flex: 1 1 320px; min-width: 280px;">
+        <h2>專案經歷</h2>
+        <div id="projects-list">
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>企業網頁前端開發</h3>
+              <span class="tag">Vue.js</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>負責企業形象網站前端切版與互動設計，提升品牌專業形象。</li>
+                <li>採用 Vue.js 與現代化前端技術，實現響應式設計與跨瀏覽器相容。</li>
+                <li>與設計師、後端工程師協作，確保專案如期交付。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>Facebook and Instagram 小編程式開發</h3>
+              <span class="tag">Node.js</span><span class="tag">API</span><span class="tag">自動化</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>開發自動化貼文、排程與數據收集工具，協助社群小編提升工作效率。</li>
+                <li>串接 Facebook/Instagram API，實現自動發文、留言與互動統計。</li>
+                <li>設計彈性化設定介面，方便行銷團隊自訂內容與排程。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>論壇系統前後端開發</h3>
+              <span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">MySQL</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>設計並開發完整論壇系統，支援發文、留言、用戶管理與權限控管。</li>
+                <li>前端採用 Vue.js，後端以 Laravel + MySQL 架構，實現 RESTful API 串接。</li>
+                <li>優化資料庫查詢與快取機制，提升系統效能與穩定性。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>積木式程式設計平台 (2023/3~2023/7)</h3>
+              <span class="tag">Vue.js</span><span class="tag">Electron</span><span class="tag">Blockly</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>使用 Vue.js 開發 SPA 前端，實現積木拖拉、即時程式碼產生與預覽功能。</li>
+                <li>整合 Blockly 與 Ardublockly，支援 Arduino 程式積木化編輯與一鍵上傳。</li>
+                <li>跨平台打包（Windows/Linux），整合 Electron 技術，方便安裝與部署。</li>
+                <li>客製化 Blockly 積木與教學範例，支援多種感測器與硬體模組。</li>
+                <li>前後端模組化設計，易於擴充與維護。</li>
+                <li>撰寫自動化測試（單元測試、E2E 測試），確保系統穩定性。</li>
+                <li>整合多國語系（i18n），提升國際化應用潛力。</li>
+                <li>撰寫詳細使用者文件與教學資源，協助教師與學生快速上手。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>M16DealingTool 麻將發牌與牌型分析工具 (2022/6~2022/9)</h3>
+              <span class="tag">C#</span><span class="tag">WinForms</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>使用 C# WinForms 開發，實作完整麻將遊戲發牌流程與玩家資料結構。</li>
+                <li>設計並實現多種牌型判斷與胡牌分析演算法，提升遊戲決策輔助能力。</li>
+                <li>開發視窗化操作介面，方便使用者進行發牌、查詢與測試。</li>
+                <li>支援自訂遊戲規則與參數設定，提升工具彈性與適用性。</li>
+                <li>熟悉物件導向設計、事件驅動程式設計與 UI/UX 基本原則。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>GolangGameManager (2022/6~2022/7)</h3>
+              <span class="tag">Golang</span><span class="tag">C++</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>以 Golang 為主體，整合並呼叫 C++ DLL 執行麻將遊戲核心邏輯。</li>
+                <li>實作房間管理、遊戲規則設定與 AI 決策模組。</li>
+                <li>專案高度模組化，方便擴充與維護。</li>
+                <li>程式碼具繁體中文註解，強化團隊協作。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project collapsible">
+            <div class="project-header" onclick="toggleDetail(this)">
+              <h3>Chatting Room 線上聊天室平台 (2021/6~2021/8)</h3>
+              <span class="tag">Vue.js</span><span class="tag">WebSocket</span><span class="tag">RESTful API</span>
+            </div>
+            <div class="project-detail" style="display:none;">
+              <ul>
+                <li>以 Vue.js 開發即時聊天室平台，支援多房間、主持人管理、語音錄音、預約包廂等功能。</li>
+                <li>整合 WebSocket 實現即時訊息與語音互動，提升用戶溝通效率。</li>
+                <li>與後端 API 串接，實現用戶認證、房間管理、用戶資料維護等功能。</li>
+                <li>採用模組化元件設計，提升程式碼可維護性與擴展性。</li>
+                <li>負責 UI/UX 設計，確保跨裝置、跨瀏覽器相容性。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -147,5 +219,16 @@
       <p>GitHub: <a href="https://github.com/shinelife" target="_blank">github.com/shinelife</a></p>
     </section>
   </main>
+  <script>
+      // 展開/收合專案詳細內容
+      function toggleDetail(header) {
+        const detail = header.nextElementSibling;
+        if (detail.style.display === 'none' || detail.style.display === '') {
+          detail.style.display = 'block';
+        } else {
+          detail.style.display = 'none';
+        }
+      }
+    </script>
 </body>
 </html>
