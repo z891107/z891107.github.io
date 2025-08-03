@@ -3,27 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShineLife's Portfolio</title>
+  <title>Sam's Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>傅永傑 Yong-Jie Fu</h1>
-    <p>後端工程師 ┃ Laravel / Node.js / Golang / MySQL / Vue.js / WebSocket / Ant Design</p>
+    <h1>陳勝彥 Sam.chen</h1>
+    <p>後端工程師 ┃ Laravel / Node.js / MySQL / Redis / Inertia.js + Vue.js </p>
   </header>
   <main>
     <section>
       <h2>自我介紹</h2>
-      <p>我是傅永傑，具備 Laravel、Golang、Node.js 等後端技術，曾參與多項系統開發與效能強化。也是國際技能競賽代表選手，榮獲 WorldSkills Asia 銀牌與WorldSkills Lyon 優勝獎項。</p>
+      <p>有 5 年的 Laravel/PHP 框架開發經驗，參與過遊戲橘子、Volvo、長榮航空、中興保全、全球人壽等大型專案開發。也是國際技能競賽 IT Network Systems Administration 的備取代表選手。</p>
     </section>
 
     <section>
       <h2>技能總覽</h2>
       <ul>
-        <li>軟體開發：Laravel / Node.js / Golang / C# / JavaScript</li>
-        <li>資料庫：MySQL / MSSQL</li>
-        <li>工具與試算：Git / RESTful API / E2E 測試 / Electron</li>
-        <li>前端框架：Vue.js / Ant Design</li>
+        <li>軟體開發：Laravel / Node.js / C++ / C </li>
+        <!-- <li>軟體開發：Laravel / Node.js / C# / C / C++ </li> -->
+        <li>資料庫：MySQL / Redis </li>
+        <li>工具與試算：Git / RESTful API / Swagger / Postman </li>
+        <li>前端框架：Inertia.js + Vue.js </li>
+        <li>其他：OAuth2.0 / JWT / CSRF / Linux / Nginx / PM2 </li>
       </ul>
     </section>
 
@@ -35,114 +37,76 @@
           <!-- 每個作品項目 -->
           <div class="project collapsible">
             <div class="project-header" onclick="toggleDetail(this)">
-              <h3>太空射擊遊戲</h3>
-              <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">jQuery</span>
+              <h3>簡易 HTTP Server + CGI</h3>
+              <span class="tag">C</span>
+              <span class="tag">CGI</span>
+              <span class="tag">Socket</span>
+              <span class="tag">HTTP Protocol</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Makefile</span>
             </div>
             <div class="project-detail" style="display:none;">
-              <ul>
-                <li>獨立開發以太空為主題的2D射擊遊戲，玩家可操控太空船閃避隕石並擊敗敵人。</li>
-                <li>具備分數統計、音效、動畫特效與多種關卡設計。</li>
-                <li>遊戲主邏輯、碰撞偵測、分數計算皆由純前端技術實現。</li>
-                <li>音效與動畫同步，提升遊戲沉浸感。</li>
-                <li>介面設計美觀，並支援多種解析度。</li>
-                <li>圖片與音效資源皆進行優化，確保載入速度與效能。</li>
-                <li>具備暫停、音效開關等完整遊戲功能。</li>
-              </ul>
-            </div>
-          </div>
-          <div class="project collapsible">
-            <div class="project-header" onclick="toggleDetail(this)">
-              <h3>線上點餐系統</h3>
-              <span class="tag">Vue.js</span><span class="tag">Node.js</span><span class="tag">MySQL</span>
-            </div>
-            <div class="project-detail" style="display:none;">
-              <ul>
-                <li>設計並開發完整線上點餐平台，支援多店家、菜單管理、訂單流程與即時通知。</li>
-                <li>前端採用 Vue.js，後端以 Node.js + MySQL 架構，實現 RESTful API 串接。</li>
-                <li>整合第三方金流與 QR Code 點餐，提升用戶便利性。</li>
-                <li>負責 UI/UX 設計，確保手機、平板、桌機皆有良好體驗。</li>
+              <ul> 
+                <li>以 C 語言獨立開發簡易 HTTP 伺服器，支援基本的 GET 與 POST 請求處理。</li>
+                <li>實作 CGI 機制，能呼叫外部程式（如 view.cgi、insert.cgi）處理動態內容。</li>
+                <li>具備路由功能，可依據不同 URI 與 HTTP method 執行對應邏輯。</li>
+                <li>支援檔案上傳（/insert.cgi）與檔案檢視（/view.cgi），並進行基礎錯誤處理。</li>
+                <li>採用多檔案分工設計，主程式、HTTP 處理、CGI 處理分離，提升維護性。</li>
+                <li>使用 Makefile 管理專案編譯流程，方便專案建置與部署。</li>
+                <li>所有功能皆以純 C 語言與標準函式庫實現，無需額外第三方套件。</li>
               </ul>
               <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
-                <img src="img/order meal.png" alt="線上點餐系統畫面1" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-                <img src="img/order meal 2.png" alt="線上點餐系統畫面2" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <img src="img/httpServer1.png" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <img src="img/httpServer2.png" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <img src="img/httpServer3.png" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <img src="img/httpServer4.png" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
               </div>
             </div>
           </div>
           <div class="project collapsible">
             <div class="project-header" onclick="toggleDetail(this)">
-              <h3>五子棋遊戲</h3>
-              <span class="tag">Node.js</span><span class="tag">WebSocket</span><span class="tag">Vue.js</span>
+              <h3>Discord 遊戲成績推播機器人</h3>
+              <span class="tag">Node.js</span>
+              <span class="tag">discord.js</span>
+              <span class="tag">axios</span>
+              <span class="tag">cheerio</span>
+              <span class="tag">ES Modules</span>
+              <span class="tag">Web Scraping</span>
             </div>
             <div class="project-detail" style="display:none;">
               <ul>
-                <li>開發即時對戰五子棋遊戲，支援玩家配對、觀戰與聊天功能。</li>
-                <li>後端以 Node.js + WebSocket 處理即時連線，前端採用 Vue.js 呈現棋盤互動。</li>
-                <li>設計遊戲規則判斷與勝負判定演算法。</li>
-                <li>實作房間管理與遊戲歷程記錄，提升用戶體驗。</li>
+                <li>使用 Node.js 與 discord.js 快速整合 Discord Bot 功能。</li>
+                <li>採用 ES Modules 與 Promise/async/await 提升程式可維護性。</li>
+                <li>利用 axios 與 cheerio 進行網頁爬蟲，定時爬取遊戲官網玩家成績，並以 Discord embed 格式推播至指定頻道。</li>
+                <li>支援自訂推播頻道與多種成就、評價圖示。</li>
+                <li>模組化設計，方便擴充新遊戲或功能。</li>
+                <li>支援多帳號與多頻道推播，提升彈性與使用者體驗。</li>
+                <li>Discord 指令式互動，動態載入指令模組，提供歌曲資料庫查詢與隨機推薦等指令功能。</li>
               </ul>
+              <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+                <img src="img/maimai.png" alt="遊戲畫面" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+              </div>
             </div>
           </div>
           <div class="project collapsible">
             <div class="project-header" onclick="toggleDetail(this)">
-              <h3>訂票系統開發</h3>
-              <span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">RESTful API</span>
+              <h3>回合制戰棋遊戲</h3>
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Git</span>
             </div>
             <div class="project-detail" style="display:none;">
-              <ul>
-                <li>設計並開發活動訂票系統，支援座位選擇、票種設定、線上付款與 QR Code 驗票。</li>
-                <li>後端採用 Laravel，實現多角色權限控管與訂單管理。</li>
-                <li>串接第三方金流與 Email 通知，提升自動化程度。</li>
-                <li>撰寫 API 文件，方便前端與第三方系統整合。</li>
+              <ul> 
+                <li>採用 Unity 遊戲引擎開發 2D 回合制戰棋遊戲，實現角色動畫與場景互動。</li> 
+                <li>以 C# 撰寫遊戲核心邏輯，包括角色控制、卡牌系統、血量與分數管理。</li> 
+                <li>模組化設計遊戲架構，將角色、卡牌、UI 等功能分離，方便維護與擴充。</li> 
+                <li>設計資料驅動的職業與卡牌系統，支援多職業、多卡牌組合與平衡調整。</li> 
+                <li>自訂 UI 元件，包含血條、卡牌列表顯示與勝負提示，提升玩家體驗。</li> 
+                <li>使用 Git 進行版本控制，支援多人協作與分支開發流程。</li> 
+                <li>撰寫技術文件與專案說明，協助團隊溝通與後續維護。</li> 
               </ul>
-            </div>
-          </div>
-          <div class="project collapsible">
-            <div class="project-header" onclick="toggleDetail(this)">
-              <h3>圖書館API開發</h3>
-              <span class="tag">Laravel</span><span class="tag">MySQL</span>
-            </div>
-            <div class="project-detail" style="display:none;">
-              <ul>
-                <li>設計並開發圖書館管理 API，支援書籍查詢、借閱、歸還與逾期管理。</li>
-                <li>採用 Laravel 架構，資料庫使用 MySQL。</li>
-                <li>實作 JWT 驗證機制，確保 API 安全性。</li>
-                <li>撰寫 Swagger 文件，方便前端與第三方系統串接。</li>
-              </ul>
-            </div>
-          </div>
-          <div class="project collapsible">
-            <div class="project-header" onclick="toggleDetail(this)">
-              <h3>多媒體相簿管理系統</h3>
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span><span class="tag">Vue.js</span><span class="tag">jQuery</span><span class="tag">PHP</span>
-            </div>
-            <div class="project-detail" style="display:none;">
-              <ul>
-                <li>開發一套基於 PHP 與前端技術的多媒體相簿管理系統，實現用戶登入、相簿瀏覽、影片播放等功能。</li>
-                <li>用戶登入驗證與權限管理。</li>
-                <li>相簿與影片列表瀏覽，支援影片播放與全螢幕切換。</li>
-                <li>音訊控制（開啟/關閉音效）。</li>
-                <li>使用 Bootstrap 實現響應式網頁設計。</li>
-                <li>前端互動採用 Vue.js 與 jQuery。</li>
-                <li>後端以 PHP 開發，XAMPP 本地伺服器環境。</li>
-                <li>獨立設計並實作前後端功能，撰寫前端互動邏輯與 UI 設計，整合多媒體播放與用戶體驗優化。</li>
-              </ul>
-            </div>
-          </div>
-          <div class="project collapsible">
-            <div class="project-header" onclick="toggleDetail(this)">
-              <h3>俄羅斯方塊網頁遊戲（仿遊戲機造型）</h3>
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">SVG</span><span class="tag">PHP</span>
-            </div>
-            <div class="project-detail" style="display:none;">
-              <ul>
-                <li>以 HTML、CSS、JavaScript 製作經典俄羅斯方塊遊戲，畫面仿照懷舊遊戲機外觀設計，提升趣味性與視覺吸引力。</li>
-                <li>前端使用 jQuery 處理遊戲邏輯、方塊移動與碰撞判斷，並實現即時分數顯示。</li>
-                <li>運用 SVG 與多張圖片資源，精心還原遊戲機造型與按鈕互動效果。</li>
-                <li>後端以 PHP 實作會員註冊、分數上傳與排行榜功能，支援多位玩家競賽。</li>
-                <li>熟悉前後端整合、AJAX 非同步資料傳輸與網頁互動設計。</li>
-              </ul>
-              <div style="margin-top:0.5rem;">
-                <img src="img/Tetris.png" alt="俄羅斯方塊遊戲畫面" style="max-width:260px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+              <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+                <img src="img/unity.png" alt="遊戲畫面" style="max-width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
               </div>
             </div>
           </div>
@@ -155,102 +119,90 @@
         <div id="projects-list">
           <div class="project collapsible">
             <div class="project-header" onclick="toggleDetail(this)">
-              <h3>企業網頁前端開發</h3>
-              <span class="tag">Vue.js</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Inertia</span>
+              <h3>廣告成效管理平台</h3>
+              <span class="tag">Laravel</span>
+              <span class="tag">Restful API</span>
+              <span class="tag">Cache</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Crontab</span>
+              <span class="tag">Scramble</span>
             </div>
             <div class="project-detail" style="display:none;">
               <ul>
-                <li>負責企業形象網站前端切版與互動設計，提升品牌專業形象。</li>
-                <li>採用 Vue.js 與現代化前端技術，實現響應式設計與跨瀏覽器相容。</li>
-                <li>與設計師、後端工程師協作，確保專案如期交付。</li>
+                <li>公司內部使用的管理平台，整合 Line Ads、Meta Marketing、Google Ads 等等平台的數據。</li>
+                <li>可創建 Report Schedule 來定期下載每日報表，也可直接即時抓取 Report 內容，可篩選媒體平台、廣告帳號、受眾、素材等等</li>
+                <li>模組化設計報表類型，使用 Strategy pattern 來實作與管理報表類型，方便日後擴充</li>
+                <li>使用 Cache 加速各媒體平台報表 API 資料獲取的速度</li>
+                <li>帳號階層式管理，上層帳號可看到下層帳號所有的 Report 資料以及下載等活動紀錄，並分派各帳號的廣告權限。</li>
               </ul>
             </div>
           </div>
           <div class="project collapsible">
             <div class="project-header" onclick="toggleDetail(this)">
-              <h3>Facebook and Instagram 小編程式開發</h3>
-              <span class="tag">Node.js</span><span class="tag">API</span><span class="tag">自動化</span>
+              <h3>購車潛在客戶管理平台</h3>
+              <span class="tag">Laravel</span>
+              <span class="tag">Restful API</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Scramble</span>
             </div>
             <div class="project-detail" style="display:none;">
               <ul>
-                <li>開發自動化貼文、排程與數據收集工具，協助社群小編提升工作效率。</li>
-                <li>串接 Facebook/Instagram API，實現自動發文、留言與互動統計。</li>
-                <li>設計彈性化設定介面，方便行銷團隊自訂內容與排程。</li>
+                <li>公司內部使用的管理平台，讓業務可以快速追蹤潛客的接觸情形、購車意願、試車狀況以及下單訂購等功能。</li>
+                <li>模組化商業模塊，使用 Action pattern 來封裝各個商業邏輯，使可讀性和結構更清晰</li>
               </ul>
             </div>
           </div>
           <div class="project collapsible">
             <div class="project-header" onclick="toggleDetail(this)">
-              <h3>論壇系統前後端開發</h3>
-              <span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">MySQL</span>
+              <h3>抽獎活動系統</h3>
+              <span class="tag">Laravel</span>
+              <span class="tag">Restful API</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Scramble</span>
             </div>
             <div class="project-detail" style="display:none;">
               <ul>
-                <li>設計並開發完整論壇系統，支援發文、留言、用戶管理與權限控管。</li>
-                <li>前端採用 Vue.js，後端以 Laravel + MySQL 架構，實現 RESTful API 串接。</li>
-                <li>優化資料庫查詢與快取機制，提升系統效能與穩定性。</li>
+                <li>2C 的抽獎活動系統，透過完成任務來獲得抽獎機會，每日都有限制獎品最大抽出數量。</li>
+                <li>後端以 Laravel + MySQL 架構，實現 RESTful API 串接。</li>
+                <li>優化資料庫查詢與上鎖機制，提升系統效能、原子性與一致性。</li>
               </ul>
             </div>
           </div>
           <div class="project collapsible">
             <div class="project-header" onclick="toggleDetail(this)">
-              <h3>積木式程式設計教育平台 (2023/3~2023/7)</h3>
-              <span class="tag">Vue.js</span><span class="tag">Electron</span><span class="tag">Blockly</span>
+              <h3>GRESB 華語認證代理平台</h3>
+              <span class="tag">Laravel</span>
+              <span class="tag">Inertia.js</span>
+              <span class="tag">Vue.js</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Role-Permission</span>
+              <span class="tag">Queue</span>
             </div>
             <div class="project-detail" style="display:none;">
               <ul>
-                <li>使用 Vue.js 開發 SPA 前端，實現積木拖拉、即時程式碼產生與預覽功能。</li>
-                <li>整合 Blockly 與 Ardublockly，支援 Arduino 程式積木化編輯與一鍵上傳。</li>
-                <li>跨平台打包（Windows/Linux），整合 Electron 技術，方便安裝與部署。</li>
-                <li>客製化 Blockly 積木與教學範例，支援多種感測器與硬體模組。</li>
-                <li>前後端模組化設計，易於擴充與維護。</li>
-                <li>撰寫自動化測試（單元測試、E2E 測試），確保系統穩定性。</li>
-                <li>整合多國語系（i18n），提升國際化應用潛力。</li>
-                <li>撰寫詳細使用者文件與教學資源，協助教師與學生快速上手。</li>
+                <li>設計並開發完整的認證系統，支援發送認證請求、認證狀態、管理用戶管理與權限控管。</li>
+                <li>使用 Laravel + Inertia.js + Vue.js 建構單頁應用，使其不用額外開 API 就能讓前後端溝通。</li>
+                <li>使用 Laravel Policies + laravel-permission 套件，實現細緻的權限管理</li>
+                <li>整合 Laravel Queues 處理背景任務，用戶提交認證請求後可立即做其他操作，無需等待</li>
+                <li>透過 OAuth2.0 串接內部帳號驗證系統，實現統一帳號管理</li>
               </ul>
             </div>
           </div>
           <div class="project collapsible">
             <div class="project-header" onclick="toggleDetail(this)">
-              <h3>M16DealingTool 麻將發牌與牌型分析工具 (2022/6~2022/9)</h3>
-              <span class="tag">C#</span><span class="tag">WinForms</span>
+              <h3>網路設備管理平台</h3>
+              <span class="tag">Laravel</span>
+              <span class="tag">Filament</span>
+              <span class="tag">Radius</span>
+              <span class="tag">MySQL</span>
             </div>
             <div class="project-detail" style="display:none;">
               <ul>
-                <li>使用 C# WinForms 開發，實作完整麻將遊戲發牌流程與玩家資料結構。</li>
-                <li>設計並實現多種牌型判斷與胡牌分析演算法，提升遊戲決策輔助能力。</li>
-                <li>開發視窗化操作介面，方便使用者進行發牌、查詢與測試。</li>
-                <li>支援自訂遊戲規則與參數設定，提升工具彈性與適用性。</li>
-                <li>熟悉物件導向設計、事件驅動程式設計與 UI/UX 基本原則。</li>
-              </ul>
-            </div>
-          </div>
-          <div class="project collapsible">
-            <div class="project-header" onclick="toggleDetail(this)">
-              <h3>GolangGameManager (2022/6~2022/7)</h3>
-              <span class="tag">Golang</span><span class="tag">C++</span>
-            </div>
-            <div class="project-detail" style="display:none;">
-              <ul>
-                <li>以 Golang 為主體，整合並呼叫 C++ DLL 執行麻將遊戲核心邏輯。</li>
-                <li>實作房間管理、遊戲規則設定與 AI 決策模組。</li>
-                <li>專案高度模組化，方便擴充與維護。</li>
-                <li>程式碼具繁體中文註解，強化團隊協作。</li>
-              </ul>
-            </div>
-          </div>
-          <div class="project collapsible">
-            <div class="project-header" onclick="toggleDetail(this)">
-              <h3>Chatting Room 線上聊天室平台 (2021/6~2021/8)</h3>
-              <span class="tag">Vue.js</span><span class="tag">WebSocket</span><span class="tag">RESTful API</span>
-            </div>
-            <div class="project-detail" style="display:none;">
-              <ul>
-                <li>以 Vue.js 開發即時聊天室平台，支援多房間、主持人管理、語音錄音、預約包廂等功能。</li>
-                <li>整合 WebSocket 實現即時訊息與語音互動，提升用戶溝通效率。</li>
-                <li>與後端 API 串接，實現用戶認證、房間管理、用戶資料維護等功能。</li>
-                <li>採用模組化元件設計，提升程式碼可維護性與擴展性。</li>
-                <li>負責 UI/UX 設計，確保跨裝置、跨瀏覽器相容性。</li>
+                <li>獨立開發 Radius 認證伺服器管理後台，支援用戶帳號、群組、權限等功能。</li>
+                <li>前台透過介面來管理帳號目前所允許的設備 MAC-address 列表。</li>
+                <li>後台透過 CRM 介面來設定用戶的最大 MAC-address 設備使用量，支援群組來設定用量。</li>
+                <li>使用套件 Filament，加速前端 CRM 開發。</li>
+                <li>實作 Radius 認證日誌查詢、即時帳號管理與多條件搜尋。</li>
               </ul>
             </div>
           </div>
@@ -262,11 +214,11 @@
       <h2>刷題紀錄</h2>
       <div class="project">
         <h3>LeetCode</h3>
-        <a href="https://leetcode.com/u/cs031011/" class="tag" target="_blank">LeetCode 個人頁面</a>
+        <a href="https://leetcode.com/u/taroegg/" class="tag" target="_blank">LeetCode 個人頁面</a>
         <ul>
-          <li>Easy 240 題</li>
-          <li>Medium 238 題</li>
-          <li>Hard 40 題</li>
+          <li>Easy 12 題</li>
+          <li>Medium 17 題</li>
+          <li>Hard 2 題</li>
         </ul>
       </div>
     </section>
@@ -274,17 +226,22 @@
     <section>
       <h2>競賽經歷</h2>
       <ul>
-        <li>WorldSkills Asia 2023 - 銀牌</li>
-        <li>WorldSkills Lyon 2024 - 優勝獎項</li>
+        <li>45th WorldSkills Competition, IT Network Systems Administration - National Representative Alternate</li>
+        <li>華佗杯 CCNA R&S – 第一名</li>
       </ul>
     </section>
 
     <section>
       <h2>聯絡方式</h2>
-      <p>Email: nevergiveuptherace@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/shinelife" target="_blank">github.com/shinelife</a></p>
+      <p>Email: sam.shengyan.chen@gmail.com</p>
+      <p>GitHub: <a href="https://github.com/z891107" target="_blank">github.com/z891107</a></p>
     </section>
   </main>
+  <!-- 全螢幕圖片預覽元件 -->
+  <div id="img-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;">
+    <span id="img-modal-close" style="position:absolute;top:32px;right:48px;font-size:2.5rem;color:#fff;cursor:pointer;z-index:10001;font-family:sans-serif;">&times;</span>
+    <img id="img-modal-img" src="" alt="預覽" style="max-width:90vw;max-height:85vh;border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.22);background:#fff;">
+  </div>
   <script>
       // 展開/收合專案詳細內容
       function toggleDetail(header) {
@@ -295,6 +252,42 @@
           detail.style.display = 'none';
         }
       }
+
+      // 全螢幕圖片預覽功能
+      document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('img-modal');
+        const modalImg = document.getElementById('img-modal-img');
+        const closeBtn = document.getElementById('img-modal-close');
+
+        // 點擊圖片開啟全螢幕
+        document.querySelectorAll('.project-detail img').forEach(img => {
+          img.addEventListener('click', function (e) {
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+          });
+        });
+
+        // 點叉叉或黑色背景關閉
+        closeBtn.addEventListener('click', function () {
+          modal.style.display = 'none';
+          modalImg.src = '';
+          document.body.style.overflow = '';
+        });
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+            modalImg.src = '';
+            document.body.style.overflow = '';
+          }
+        });
+
+        // 防止點擊圖片本身時關閉
+        modalImg.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      });
     </script>
 </body>
 </html>

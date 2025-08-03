@@ -179,6 +179,14 @@ a:hover {
   padding-left: 0.2rem;
   animation: fadeIn 0.3s;
 }
+.project-detail img {
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s;
+  cursor: pointer;
+}
+.project-detail img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: none; }
